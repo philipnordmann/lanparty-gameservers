@@ -5,4 +5,6 @@ services:
     container_name: minecraft-server
     ports:
       - "${GAMESERVER_IP}:25565:25565/tcp"
+    volumes:
+      - ${DATA_PATH}/minecraft:/data
     restart: unless-stopped
