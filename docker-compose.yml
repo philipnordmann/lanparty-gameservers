@@ -15,5 +15,7 @@ services:
     container_name: satisfactory
     restart: unless-stopped
     volumes:
-      - ${DATA_PATH}/satisfactory:/data
+      - satisfactory-volume:/data
     network_mode: host
+volumes:
+  satisfactory-volume:
