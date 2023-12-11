@@ -1,0 +1,8 @@
+version: '3.4'
+services:
+  linuxgsm-csgo:
+    image: gameservermanagers/gameserver:mc
+    container_name: minecraft-server
+    ports:
+      - "${GAMESERVER_IP}:25565:25565/tcp"
+    restart: unless-stopped
