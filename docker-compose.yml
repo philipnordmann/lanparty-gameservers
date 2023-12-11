@@ -15,5 +15,5 @@ services:
     ports:
       - "${GAMESERVER_IP}:34197:34197"
     volumes:
-      - ${DATA_PATH}/minecraft:/data
+      - ${DATA_PATH}/factorio:/data
     restart: unless-stopped
