@@ -8,12 +8,3 @@ services:
     volumes:
       - ${DATA_PATH}/minecraft:/data
     restart: unless-stopped
-
-  linuxgsm-fctr:
-    image: gameservermanagers/gameserver:fctr
-    container_name: fctr-server
-    ports:
-      - "${GAMESERVER_IP}:34197:34197"
-    volumes:
-      - ${DATA_PATH}/factorio:/data
-    restart: unless-stopped
