@@ -8,3 +8,12 @@ services:
     volumes:
       - ${DATA_PATH}/minecraft:/data
     restart: unless-stopped
+  
+  linuxgsm-satisfactory:
+    image: gameservermanagers/gameserver:sf
+    # image: ghcr.io/gameservermanagers/gameserver:sf
+    container_name: satisfactory
+    restart: unless-stopped
+    volumes:
+      - ${DATA_PATH}/satisfactory:/data
+    network_mode: host
