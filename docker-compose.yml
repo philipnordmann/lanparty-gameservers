@@ -1,10 +1,19 @@
 version: '3.4'
 services:
-  linuxgsm-csgo:
+  linuxgsm-minecraft:
     image: gameservermanagers/gameserver:mc
     container_name: minecraft-server
     ports:
       - "${GAMESERVER_IP}:25565:25565/tcp"
+    volumes:
+      - ${DATA_PATH}/minecraft:/data
+    restart: unless-stopped
+
+  linuxgsm-fctr:
+    image: gameservermanagers/gameserver:fctr
+    container_name: fctr-server
+    ports:
+      - "${GAMESERVER_IP}:34197:34197"
     volumes:
       - ${DATA_PATH}/minecraft:/data
     restart: unless-stopped
