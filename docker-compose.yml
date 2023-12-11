@@ -9,13 +9,13 @@ services:
       - ${DATA_PATH}/minecraft:/data
     restart: unless-stopped
   
-  linuxgsm-satisfactory:
-    image: gameservermanagers/gameserver:sf
+  linuxgsm-factorio:
+    image: gameservermanagers/gameserver:fctr
     # image: ghcr.io/gameservermanagers/gameserver:sf
-    container_name: satisfactory
+    container_name: factorio
     restart: unless-stopped
     volumes:
-      - satisfactory-volume:/data
+      - factorio-volume:/data
     network_mode: host
 volumes:
-  satisfactory-volume:
+  factorio-volume:
